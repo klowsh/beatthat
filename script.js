@@ -164,10 +164,10 @@ var getWinners = function (arr) {
       arrOfLargestNumber = []; // to reset the array if there is a number larger than previous numbers, not able to use pop as there could be more than 1 player with a tied number
       arrOfLargestNumber.push(index);
     } else if (arr[index] == largestNo) {
-      arrOfLargestNumber.push(index); // if tie to push into array
+      arrOfLargestNumber.push(index); // if tie to push into existing array
     }
   }
-  var listOfWinners = arrOfLargestNumber.map((x) => x + 1);
+  var listOfWinners = arrOfLargestNumber.map((x) => x + 1); // need to add +1 as array starts from 0, while player numbers start from 1
   return listOfWinners;
 };
 
